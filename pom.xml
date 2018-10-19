@@ -8,8 +8,8 @@
     <name>spring-aop-examples</name>
 
     <properties>
-        <aspectj.version>1.8.9</aspectj.version>
-        <spring.version>4.3.3.RELEASE</spring.version>
+        <aspectj.version>1.8.13</aspectj.version>
+        <spring.version>4.3.20.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
