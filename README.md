@@ -1,5 +1,13 @@
-Spring Framework AOP examples (AspectJ)
+Spring AOP examples (AspectJ)
 =
+
+## Technical information
+
+| Piece of tech | Version |
+|---------------|---------|
+| Java          | 17      |
+| Spring        | 5.3.x   |
+| AspectJ       | 1.9.x   |
 
 ## Deploy
 
