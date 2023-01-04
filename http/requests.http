@@ -1,0 +1,13 @@
+GET http://localhost:8080/spring-aop-examples/afterReturning?id=100500
+
+###
+GET http://localhost:8080/spring-aop-examples/afterThrowing
+
+###
+GET http://localhost:8080/spring-aop-examples/afterThrowingNone
+
+###
+GET http://localhost:8080/spring-aop-examples/around
+
+###
+GET http://localhost:8080/spring-aop-examples/around/777

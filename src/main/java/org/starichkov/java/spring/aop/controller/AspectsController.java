@@ -1,13 +1,10 @@
 package org.starichkov.java.spring.aop.controller;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,18 +16,18 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("/")
 public class AspectsController {
-    private static final Log LOGGER = LogFactory.getLog(AspectsController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AspectsController.class);
 
     public AspectsController() {
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping
     public String printWelcome(ModelMap model) {
         model.addAttribute("message", "Hello, Spring!");
         return "index";
     }
 
-    @RequestMapping(value = "afterReturning", method = RequestMethod.GET)
+    @GetMapping(value = "afterReturning")
     public ModelAndView showAfterReturning(@RequestParam("id") Long id) {
         LOGGER.info("IN afterReturning");
         ModelMap model = new ModelMap();
@@ -39,13 +36,13 @@ public class AspectsController {
         return new ModelAndView("afterReturning", model);
     }
 
-    @RequestMapping(value = "afterThrowing", method = RequestMethod.GET)
+    @GetMapping(value = "afterThrowing")
     public ModelAndView showAfterThrowing() throws Exception {
         LOGGER.info("IN afterThrowing");
         throw new Exception("Throwing exception from 'afterThrowing' method.");
     }
 
-    @RequestMapping(value = "afterThrowingNone", method = RequestMethod.GET)
+    @GetMapping(value = "afterThrowingNone")
     public ModelAndView showAfterThrowingNone() throws Exception {
         LOGGER.info("IN afterThrowingNone");
         ModelMap model = new ModelMap();
@@ -53,13 +50,13 @@ public class AspectsController {
         return new ModelAndView("afterThrowing", model);
     }
 
-    @RequestMapping(value = "around", method = RequestMethod.GET)
+    @GetMapping(value = "around")
     public ModelAndView showAround() {
         LOGGER.info("IN around");
         return new ModelAndView("around", new ModelMap());
     }
 
-    @RequestMapping(value = "around/{arg}", method = RequestMethod.GET)
+    @GetMapping(value = "around/{arg}")
     public ModelAndView showAround(HttpServletRequest request, @PathVariable("arg") String arg) {
         LOGGER.info("IN around");
         ModelMap model = new ModelMap();
