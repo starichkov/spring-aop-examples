@@ -10,7 +10,7 @@
     <properties>
         <java.version>17</java.version>
         <aspectj.version>1.9.19</aspectj.version>
-        <spring.version>5.3.26</spring.version>
+        <spring.version>5.3.27</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
