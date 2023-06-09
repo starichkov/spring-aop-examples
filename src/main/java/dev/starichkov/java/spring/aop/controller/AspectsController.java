@@ -1,4 +1,4 @@
-package org.starichkov.java.spring.aop.controller;
+package dev.starichkov.java.spring.aop.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

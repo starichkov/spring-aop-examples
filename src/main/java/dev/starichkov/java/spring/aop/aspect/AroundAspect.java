@@ -1,4 +1,4 @@
-package org.starichkov.java.spring.aop.aspect;
+package dev.starichkov.java.spring.aop.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -18,7 +18,7 @@ public class AroundAspect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AroundAspect.class);
 
-    @Pointcut(value = "execution(* org.starichkov.java.spring.aop.controller.AspectsController.showAround(javax.servlet.http.HttpServletRequest, String)) && args(request, arg))", argNames = "request, arg")
+    @Pointcut(value = "execution(* dev.starichkov.java.spring.aop.controller.AspectsController.showAround(javax.servlet.http.HttpServletRequest, String)) && args(request, arg))", argNames = "request, arg")
     public void showAround(HttpServletRequest request, String arg) {
     }
 

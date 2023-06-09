@@ -1,4 +1,4 @@
-package org.starichkov.java.spring.aop.aspect;
+package dev.starichkov.java.spring.aop.aspect;
 
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -15,7 +15,7 @@ public class AfterReturningAspect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AfterReturningAspect.class);
 
-    @Pointcut("execution(* org.starichkov.java.spring.aop.controller.AspectsController.showAfterReturning(Long)) && args(id))")
+    @Pointcut("execution(* dev.starichkov.java.spring.aop.controller.AspectsController.showAfterReturning(Long)) && args(id))")
     public void afterReturning(Long id) {
     }
 

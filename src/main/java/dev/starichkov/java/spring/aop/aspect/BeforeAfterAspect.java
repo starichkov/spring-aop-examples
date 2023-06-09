@@ -1,4 +1,4 @@
-package org.starichkov.java.spring.aop.aspect;
+package dev.starichkov.java.spring.aop.aspect;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -16,7 +16,7 @@ public class BeforeAfterAspect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BeforeAfterAspect.class);
 
-    @Pointcut("execution(* org.starichkov.java.spring.aop.controller.AspectsController.printWelcome(..))")
+    @Pointcut("execution(* dev.starichkov.java.spring.aop.controller.AspectsController.printWelcome(..))")
     public void printWelcome() {
     }
 

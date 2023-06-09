@@ -1,4 +1,4 @@
-package org.starichkov.java.spring.aop.aspect;
+package dev.starichkov.java.spring.aop.aspect;
 
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -15,11 +15,11 @@ public class AfterThrowingAspect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AfterThrowingAspect.class);
 
-    @Pointcut("execution(* org.starichkov.java.spring.aop.controller.AspectsController.showAfterThrowing())")
+    @Pointcut("execution(* dev.starichkov.java.spring.aop.controller.AspectsController.showAfterThrowing())")
     public void afterThrowing() {
     }
 
-    @Pointcut("execution(* org.starichkov.java.spring.aop.controller.AspectsController.showAfterThrowingNone())")
+    @Pointcut("execution(* dev.starichkov.java.spring.aop.controller.AspectsController.showAfterThrowingNone())")
     public void afterThrowingNone() {
     }
 

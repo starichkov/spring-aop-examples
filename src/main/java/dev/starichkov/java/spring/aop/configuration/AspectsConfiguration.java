@@ -1,9 +1,9 @@
-package org.starichkov.java.spring.aop.configuration;
+package dev.starichkov.java.spring.aop.configuration;
 
-import org.starichkov.java.spring.aop.aspect.AfterReturningAspect;
-import org.starichkov.java.spring.aop.aspect.AfterThrowingAspect;
-import org.starichkov.java.spring.aop.aspect.AroundAspect;
-import org.starichkov.java.spring.aop.aspect.BeforeAfterAspect;
+import dev.starichkov.java.spring.aop.aspect.AfterReturningAspect;
+import dev.starichkov.java.spring.aop.aspect.AfterThrowingAspect;
+import dev.starichkov.java.spring.aop.aspect.AroundAspect;
+import dev.starichkov.java.spring.aop.aspect.BeforeAfterAspect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
