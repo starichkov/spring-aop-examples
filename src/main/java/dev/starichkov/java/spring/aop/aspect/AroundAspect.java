@@ -30,4 +30,17 @@ public class AroundAspect {
         LOGGER.info("AROUND HANDLER - AFTER showAround, RESULT: {}", result);
         return result;
     }
+
+    @Pointcut(value = "execution(* dev.starichkov.java.spring.aop.controller..*.*(jakarta.servlet.http.HttpServletRequest, ..)) && args(request, ..))", argNames = "request")
+    public void aroundMultiple(HttpServletRequest request) {
+    }
+
+    @Around(value = "aroundMultiple(request)", argNames = "joinPoint, request")
+    public Object aroundMultipleHandler(ProceedingJoinPoint joinPoint, HttpServletRequest request) throws Throwable {
+        LOGGER.info("AROUND HANDLER - BEFORE showAround");
+        Object result = joinPoint.proceed();
+        LOGGER.info("AROUND HANDLER - AFTER showAround");
+        LOGGER.info("AROUND HANDLER - AFTER showAround, RESULT: {}", result);
+        return result;
+    }
 }
