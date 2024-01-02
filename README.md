@@ -21,7 +21,7 @@ Spring 5 can only work with Tomcat 9 (and prior) or Wildfly 26 (and prior).
 
 ## Deploy
 
-Examples were tested with Tomcat 10.0.22, 10.1.9 and Wildfly 27.0.1.
+Examples were tested with Tomcat 10.0.xx, 10.1.xx and Wildfly 27.0.1.
 
 ### Tomcat
 
