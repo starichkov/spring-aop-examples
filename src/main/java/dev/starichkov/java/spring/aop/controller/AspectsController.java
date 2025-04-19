@@ -43,7 +43,7 @@ public class AspectsController {
     }
 
     @GetMapping(value = "afterThrowingNone")
-    public ModelAndView showAfterThrowingNone() throws Exception {
+    public ModelAndView showAfterThrowingNone() {
         LOGGER.info("IN afterThrowingNone");
         ModelMap model = new ModelMap();
         model.addAttribute("afterThrowing", "Hello, After Throwing (None) Aspect!");
@@ -58,7 +58,7 @@ public class AspectsController {
 
     @GetMapping(value = "around/{arg}")
     public ModelAndView showAround(HttpServletRequest request, @PathVariable("arg") String arg) {
-        LOGGER.info("IN around");
+        LOGGER.info("IN around with argument");
         ModelMap model = new ModelMap();
         model.addAttribute("around", "Hello, Around Aspect!");
         model.addAttribute("arg", arg);

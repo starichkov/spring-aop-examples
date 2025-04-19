@@ -9,13 +9,13 @@ This project is using plain Spring Framework without Spring Boot **intentionally
 
 | Piece of tech | Version |
 |---------------|---------|
-| Java          | 17      |
-| Spring        | 6.0.x   |
+| Java          | 21      |
+| Spring        | 6.2.x   |
 | AspectJ       | 1.9.x   |
 | Tomcat        | 10.0.x  |
 | Wildfly       | 27.0.x  |
 
-Spring 6 works Tomcat 10+ and with Wildfly 27+.
+Spring 6 works with Tomcat 10+ and with Wildfly 27+.
 
 Spring 5 can only work with Tomcat 9 (and prior) or Wildfly 26 (and prior).
 
@@ -25,7 +25,7 @@ Examples were tested with Tomcat 10.0.xx, 10.1.xx and Wildfly 27.0.1.
 
 ### Tomcat
 
-If you've installed Tomcat via SdkMan and observing `permission denied` error during Tomcat launch attempt,
+If you've installed Tomcat via SdkMan and observing `permission denied` error during a Tomcat launch attempt,
 check the permissions on catalina.sh script.
 
 ```
